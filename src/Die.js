@@ -8,14 +8,19 @@ class Die extends React.Component {
         const dice = this.props.dice
         return (
           <div>
-                {dice === 1 ? <FaDiceOne className="Die" /> : null}
-                {dice === 2 ? <FaDiceTwo className="Die" /> : null}
-                {dice === 3 ? <FaDiceThree className="Die" /> : null}
-                {dice === 4 ? <FaDiceFour className="Die" /> : null}
-                {dice === 5 ? <FaDiceFive className="Die" /> : null}
-                {dice === 6 ? <FaDiceSix className="Die" /> : null}
+                {dice === 1 ? <FaDiceOne className={`Die ${this.props.rolling &&
+          "shaking"}`} /> : null}
+                {dice === 2 ? <FaDiceTwo className={`Die ${this.props.rolling &&
+          "shaking"}`} /> : null}
+                {dice === 3 ? <FaDiceThree className={`Die ${this.props.rolling &&
+          "shaking"}`} /> : null}
+                {dice === 4 ? <FaDiceFour className={`Die ${this.props.rolling &&
+          "shaking"}`} /> : null}
+                {dice === 5 ? <FaDiceFive className={`Die ${this.props.rolling &&
+          "shaking"}`} /> : null}
+                {dice === 6 ? <FaDiceSix className={`Die ${this.props.rolling &&
+          "shaking"}`} /> : null}
           </div>
-
       );
     }
   }
